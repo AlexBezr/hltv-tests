@@ -44,6 +44,8 @@ public class MainPageTests {
 
     @Test
     void SignUp() {
-      $(".navsearchinput tt-input").setValue("ZyWoo");
+      $(".user-wrap .navsignin").click();
+      $("#overlay name=username").setValue("admin");
+      $("[name=password]").setValue("admin");
     }
 }
