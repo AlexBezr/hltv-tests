@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
@@ -16,6 +17,7 @@ public class MainPageTests extends TestBase {
     String password = faker.esports();
 
    @Test
+   @DisplayName("Проверка вверхней панели")
     void CheckElementsOnTopBar() {
        MainPage.CheckTopBar("Matches");
        MainPage.CheckTopBar("Results");
@@ -30,6 +32,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка основных элементов страницы")
     void CheckMidElements() {
         MainPage.CheckMidBar("Overview");
         MainPage.CheckMidBar("Matches");
@@ -40,6 +43,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Ошибочная авторизация пользователя")
     void SignUp() {
       $(".navsignin").click();
       $(".login-dialog standard-box").$("[name=username]").setValue(login);
