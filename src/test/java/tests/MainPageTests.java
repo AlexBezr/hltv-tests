@@ -1,17 +1,19 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
+    Faker faker = new Faker();
+
+    String login = faker.funnyName();
+    String password = faker.esports();
 
    @Test
     void CheckElementsOnTopBar() {
@@ -35,20 +37,13 @@ public class MainPageTests extends TestBase {
         MainPage.CheckMidBar("Stats");
         MainPage.CheckMidBar("Yesterday's news");
         MainPage.CheckMidBar("Today's news");
-//      $(".colCon").shouldHave(text("Overview"));
-//        $(".colCon").shouldHave(text("Matches"));
-//        $(".colCon").shouldHave(text("Results"));
-//        $(".colCon").shouldHave(text("Stats"));
-//        $(".colCon").shouldHave(text("Yesterday's news"));
-//        $(".colCon").shouldHave(text("Today's news"));
-
     }
 
     @Test
     void SignUp() {
       $(".navsignin").click();
-      $(".login-dialog standard-box").$("[name=username]").setValue("admin");
-      $(".login-dialog standard-box").$("[name=password]").setValue("admin");
+      $(".login-dialog standard-box").$("[name=username]").setValue(login);
+      $(".login-dialog standard-box").$("[name=password]").setValue(password);
       $("type=submit").find(byText("Login")).click();
     }
 }
