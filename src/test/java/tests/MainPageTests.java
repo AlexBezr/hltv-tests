@@ -13,8 +13,8 @@ public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     Faker faker = new Faker();
 
-    String login = faker.funnyName();
-    String password = faker.esports();
+    String login = faker.name().firstName();
+    String password = faker.name().lastName();
 
    @Test
    @DisplayName("Проверка вверхней панели")
