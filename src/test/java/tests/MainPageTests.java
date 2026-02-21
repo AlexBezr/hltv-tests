@@ -29,12 +29,18 @@ public class MainPageTests extends TestBase {
 
     @Test
     void CheckMidElements() {
-      $(".colCon").shouldHave(text("Overview"));
-        $(".colCon").shouldHave(text("Matches"));
-        $(".colCon").shouldHave(text("Results"));
-        $(".colCon").shouldHave(text("Stats"));
-        $(".colCon").shouldHave(text("Yesterday's news"));
-        $(".colCon").shouldHave(text("Today's news"));
+        MainPage.CheckMidBar("Overview");
+        MainPage.CheckMidBar("Matches");
+        MainPage.CheckMidBar("Results");
+        MainPage.CheckMidBar("Stats");
+        MainPage.CheckMidBar("Yesterday's news");
+        MainPage.CheckMidBar("Today's news");
+//      $(".colCon").shouldHave(text("Overview"));
+//        $(".colCon").shouldHave(text("Matches"));
+//        $(".colCon").shouldHave(text("Results"));
+//        $(".colCon").shouldHave(text("Stats"));
+//        $(".colCon").shouldHave(text("Yesterday's news"));
+//        $(".colCon").shouldHave(text("Today's news"));
 
     }
 

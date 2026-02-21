@@ -8,8 +8,13 @@ import static com.codeborne.selenide.Selenide.$;
 public class MainPage {
 
     public static SelenideElement TopBar = $("#navBarContainerFull");
+    public static SelenideElement MidBar = $("$(.colCon)");
 
     public static void CheckTopBar(String value) {
         TopBar.shouldHave(text(value));
+    }
+
+    public static void CheckMidBar(String value) {
+        MidBar.shouldHave(text(value));
     }
 }
