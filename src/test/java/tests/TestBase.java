@@ -15,7 +15,7 @@ public class TestBase {
         SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
-        // Configuration.pageLoadStrategy = "eager";
+         Configuration.pageLoadStrategy = "eager";
         open("https://www.hltv.org/");
     }
 }
