@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
