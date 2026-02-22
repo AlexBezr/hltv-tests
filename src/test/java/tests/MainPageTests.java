@@ -6,8 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static pages.MainPage.MidBar;
+import static pages.MainPage.TopBar;
 
 public class MainPageTests extends TestBase {
 
@@ -41,6 +44,27 @@ public class MainPageTests extends TestBase {
         MainPage.CheckMidBar("Stats");
         MainPage.CheckMidBar("Yesterday's news");
         MainPage.CheckMidBar("Today's news");
+    }
+
+    @Test
+    @Step("Проверка кликабельности Matches")
+    void CheckResultsPage() {
+        TopBar.find(byText("Matches")).click();
+       $(".new-standardPageGrid").shouldHave(text("Upcoming Counter-Strike matches"));
+    }
+
+    @Test
+    @Step("Проверка кликабельности Stats")
+    void CheckStatsButton() {
+        TopBar.find(byText("Stats")).click();
+        $(".widthControl").shouldHave(text("Quick navigation"));
+    }
+
+    @Test
+    @Step("Проверка кликабельности Results")
+    void CheckResultsButton() {
+        TopBar.find(byText("Results")).click();
+        $(".widthControl").shouldHave(text("Featured results"));
     }
 
     @Test
