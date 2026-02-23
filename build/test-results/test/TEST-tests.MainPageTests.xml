@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.mainPageTests" tests="6" skipped="1" failures="0" errors="0" timestamp="2026-02-23T15:35:47.455Z" hostname="ZAGREY" time="20.37">
+<testsuite name="tests.mainPageTests" tests="6" skipped="1" failures="0" errors="0" timestamp="2026-02-23T16:57:14.376Z" hostname="ZAGREY" time="25.185">
   <properties/>
-  <testcase name="Проверка кликабельности Stats" classname="tests.mainPageTests" time="4.547"/>
+  <testcase name="Проверка кликабельности Stats" classname="tests.mainPageTests" time="4.671"/>
   <testcase name="Ошибочная авторизация пользователя" classname="tests.mainPageTests" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="Проверка основных элементов страницы" classname="tests.mainPageTests" time="4.256"/>
-  <testcase name="Проверка кликабельности Results" classname="tests.mainPageTests" time="4.05"/>
-  <testcase name="Проверка вверхней панели" classname="tests.mainPageTests" time="3.323"/>
-  <testcase name="Проверка кликабельности Matches" classname="tests.mainPageTests" time="4.055"/>
+  <testcase name="Проверка основных элементов страницы" classname="tests.mainPageTests" time="4.673"/>
+  <testcase name="Проверка кликабельности Results" classname="tests.mainPageTests" time="4.196"/>
+  <testcase name="Проверка вверхней панели" classname="tests.mainPageTests" time="3.534"/>
+  <testcase name="Проверка кликабельности Matches" classname="tests.mainPageTests" time="7.985"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-февр. 23, 2026 8:35:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+февр. 23, 2026 9:57:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 143; Please update to a Selenium version that supports CDP version 145
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.13.0 / Selenium 4.39.0 / chrome 145.0.7632.76 windows
 ]]></system-err>

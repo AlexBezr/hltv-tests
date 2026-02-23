@@ -35,6 +35,6 @@ public class TestBase {
         Attach.pageSource(); //Исходный код страницы.
         Attach.browserConsoleLogs(); //Логи консоли браузера.
         Attach.addVideo(); //Видео записи теста.
-        Selenide.closeWebDriver(); //Закрывает браузер.
+//        Selenide.closeWebDriver(); //Закрывает браузер.
     }
 }

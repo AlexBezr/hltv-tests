@@ -35,11 +35,11 @@ class mainPageTests extends TestBase {
     @DisplayName("Проверка основных элементов страницы")
     void CheckMidElements() {
         TopBar.find(byText("News")).click();
-        MainPage.CheckMidBar("Overview");
-        MainPage.CheckMidBar("Matches");
-        MainPage.CheckMidBar("Results");
-        MainPage.CheckMidBar("Stats");
-        MainPage.CheckMidBar("Yesterday's news");
+        MainPage.CheckMidBar("TODAY'S MATCHES");
+        MainPage.CheckMidBar("RECENT ACTIVITY");
+        MainPage.CheckMidBar("TOP 30 TRANSFERS");
+        MainPage.CheckMidBar("EVENTS");
+        MainPage.CheckMidBar("RANKING");
         MainPage.CheckMidBar("Today's news");
         Selenide.sleep(3000);
     }
