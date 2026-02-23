@@ -10,8 +10,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static pages.MainPage.TopBar;
 
+@Nested
 @Tag("regression")
-class MainPageTests extends TestBase {
+class mainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
@@ -70,14 +71,14 @@ class MainPageTests extends TestBase {
         $(".widthControl").shouldHave(text("Featured results"));
         Selenide.sleep(3000);
     }
-}
 
-//    @Test
-//    @Disabled
-//    @DisplayName("Ошибочная авторизация пользователя")
-//    void SignUp() {
-//      $(".navsignin").click();
-//      $(".login-dialog standard-box").$("[name=username]").setValue(login);
-//      $(".login-dialog standard-box").$("[name=password]").setValue(password);
-//      $("type=submit").find(byText("Login")).click();
-//    }
+    @DisplayName("Ошибочная авторизация пользователя")
+    @Test
+    @Disabled
+    void Signup() {
+        $(".navsignin").click();
+        $(".login-dialog standard-box").$("[name=username]").setValue("login");
+        $(".login-dialog standard-box").$("[name=password]").setValue("password");
+        $("type=submit").find(byText("Login")).click();
+    }
+}
