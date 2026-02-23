@@ -48,8 +48,9 @@ tasks.withType(Test) {
     }
 }
 
-tasks.register('regress_test', Test) {
+tasks.register('regress_test') {
     useJUnitPlatform() {
         includeTags("regression")
+//        excludeTags("...") // тесты, которые не хотим запускать
     }
 }
