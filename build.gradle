@@ -1,6 +1,6 @@
 plugins {
     id 'java-library';
-    id('io.qameta.allure') version '3.0.2'
+    id 'io.qameta.allure' version '3.0.2'
 }
 
 repositories {
@@ -26,7 +26,6 @@ dependencies {
             "com.codeborne:selenide:7.13.0",
             "org.junit.jupiter:junit-jupiter:6.0.3",
             "org.slf4j:slf4j-simple:2.0.17",
-            "com.github.javafaker:javafaker:1.0.2",
             'io.qameta.allure:allure-selenide:2.32.0'
     )
     testRuntimeOnly(
@@ -48,9 +47,9 @@ tasks.withType(Test) {
     }
 }
 
-tasks.register('regress_test') {
+tasks.register('regress_test', Test) {
     useJUnitPlatform() {
-        includeTags("regression")
+        includeTags("regress")
 //        excludeTags("...") // тесты, которые не хотим запускать
     }
 }

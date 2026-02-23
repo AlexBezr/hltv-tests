@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static pages.MainPage.TopBar;
 
-@Tag("regression")
+@Tag("regress")
 class mainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
