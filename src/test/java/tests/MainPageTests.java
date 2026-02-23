@@ -2,17 +2,16 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.MainPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static pages.MainPage.MidBar;
 import static pages.MainPage.TopBar;
 
-public class MainPageTests extends TestBase {
+@Tag("regression")
+class MainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
@@ -45,6 +44,7 @@ public class MainPageTests extends TestBase {
         Selenide.sleep(3000);
     }
 
+    @DisplayName("Проверка кликабельности Matches")
     @Test
     @Step("Проверка кликабельности Matches")
     void CheckResultsPage() {
@@ -53,14 +53,16 @@ public class MainPageTests extends TestBase {
         Selenide.sleep(3000);
     }
 
+    @DisplayName("Проверка кликабельности Stats")
     @Test
     @Step("Проверка кликабельности Stats")
     void CheckStatsButton() {
         TopBar.find(byText("Stats")).click();
         $(".widthControl").shouldHave(text("Best players"));
-//        Selenide.sleep(3000);
+        Selenide.sleep(3000);
     }
 
+    @DisplayName("Проверка кликабельности Results")
     @Test
     @Step("Проверка кликабельности Results")
     void CheckResultsButton() {
@@ -71,6 +73,7 @@ public class MainPageTests extends TestBase {
 }
 
 //    @Test
+//    @Disabled
 //    @DisplayName("Ошибочная авторизация пользователя")
 //    void SignUp() {
 //      $(".navsignin").click();
@@ -78,4 +81,3 @@ public class MainPageTests extends TestBase {
 //      $(".login-dialog standard-box").$("[name=password]").setValue(password);
 //      $("type=submit").find(byText("Login")).click();
 //    }
-//}

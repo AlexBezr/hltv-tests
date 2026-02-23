@@ -34,6 +34,22 @@ dependencies {
     )
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform();
+
+    testLogging {
+        testLogging {
+            lifecycle {
+                events "started", "skipped", "failed", "standard_error", "standard_out"
+                // Конфигурация логирования тестов: какие события логировать
+                exceptionFormat "short" // Форматирование исключений в коротком виде
+            }
+        }
+    }
+}
+
+tasks.register('regress_test', Test) {
+    useJUnitPlatform() {
+        includeTags("regression")
+    }
 }
