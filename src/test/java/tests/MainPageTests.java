@@ -80,4 +80,9 @@ class mainPageTests extends TestBase {
         $(".login-dialog standard-box").$("[name=password]").setValue("password");
         $("type=submit").find(byText("Login")).click();
     }
+
+    @Test
+    void Check() {
+        System.out.println(System.getProperty("file.encoding"));
+    }
 }
