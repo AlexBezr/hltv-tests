@@ -16,6 +16,7 @@ class mainPageTests extends TestBase {
 
     @DisplayName("Check main page")
     @Test
+    @Tag("smoke")
     void CheckMainBlockMenu() {
         mainPage.checkMainBar("Университет");
         mainPage.checkMainBar("Образование");

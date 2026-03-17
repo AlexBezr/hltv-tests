@@ -31,14 +31,12 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities; //Присвоение настроек конфигурации браузера
     }
 
-    @BeforeEach
-        //метод выполняется перед каждым тестом
+    @BeforeEach //метод выполняется перед каждым тестом
     void setUpBeforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()); //включение слушателя Аллюр
     }
 
-    @AfterEach
-        //выполняется после каждого теста
+    @AfterEach //выполняется после каждого теста
     void addAttachments() {
         Attach.screenshotAs("Screenshot"); //Скриншот последнего состояния браузера.
         Attach.pageSource(); //Исходный код страницы.
