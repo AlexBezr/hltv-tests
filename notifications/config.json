@@ -1,11 +1,11 @@
 {
   "base": {
     "project": "urpgu_test",
-    "environment": "some env",
-    "comment": "some comment",
+    "environment": "main",
+    "comment": " ",
     "reportLink": "",
     "language": "ru",
-    "allureFolder": "C:\\Users\\garri\\AppData\\Local\\Temp\\4932681778547790907\\allure-report",
+    "allureFolder": "http://localhost:8080/job/Urgpu/allure/",
     "enableChart": true
   },
   "telegram": {
